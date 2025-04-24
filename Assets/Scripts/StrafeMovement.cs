@@ -39,7 +39,6 @@ public class StrafeMovement : MonoBehaviour
     private float jumpPressDuration = 0.1f;
 	private bool onGround = false;
 
-
     private void Awake()
     {
         // Get references
@@ -67,7 +66,7 @@ public class StrafeMovement : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
+    public void FixedUpdate()
 	{
 
 		Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));

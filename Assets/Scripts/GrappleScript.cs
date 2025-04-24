@@ -1,3 +1,4 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class GrappleScript : MonoBehaviour
@@ -7,8 +8,7 @@ public class GrappleScript : MonoBehaviour
     public LayerMask whatIsGrappleable;
     public Transform grappleTip, camera, player;
     private SpringJoint joint;
-
-    
+    public GameObject grappleIndicator;
 
     [Header("Grapple Settings")]
     [SerializeField] private float maxGrappleDistance = 100f;
@@ -16,9 +16,10 @@ public class GrappleScript : MonoBehaviour
     [SerializeField] private float spring = 4.5f;
     [SerializeField] private float damper = 7f;
     [SerializeField] private float massScale = 4.5f;
-    [SerializeField] private float maxGrappleTime = 1.5f; // tempo máximo de puxada
-    private float grappleStartTime;
+    [SerializeField] private float maxGrappleTime = 1.5f;
+    [SerializeField] private float grappleBoostForce = 15f;
 
+    private float grappleStartTime;
 
     void Awake()
     {
@@ -40,9 +41,30 @@ public class GrappleScript : MonoBehaviour
         {
             StopGrapple();
         }
+
+        if (IsGrappling() && Input.GetKey(KeyCode.S))
+        {
+            StopGrapple();
+        }
+        
+        // Aim grapple indicator configs
+        RaycastHit hit;
+        if (Physics.Raycast(camera.position, camera.forward, out hit, maxGrappleDistance, whatIsGrappleable))
+        {
+            grappleIndicator.gameObject.SetActive(true);
+        }
+        else
+        {
+            grappleIndicator.gameObject.SetActive(false);
+        }
+
+        if (IsGrappling())
+        {
+            grappleIndicator.gameObject.SetActive(false);
+        }
     }
 
-    void LateUpdate() // put things that require to be drawn/rendered after everything else
+    void LateUpdate()
     {
         DrawRope();
     }
@@ -51,9 +73,9 @@ public class GrappleScript : MonoBehaviour
     {
         RaycastHit hit;
         
-        if(Physics.Raycast(camera.position, camera.forward, out hit, maxGrappleDistance, whatIsGrappleable)) 
+        if (Physics.Raycast(camera.position, camera.forward, out hit, maxGrappleDistance, whatIsGrappleable)) 
         {
-            if (joint != null) // prevent multiple joints
+            if (joint != null)
             {
                 Destroy(joint);
                 return;
@@ -64,7 +86,6 @@ public class GrappleScript : MonoBehaviour
             joint.autoConfigureConnectedAnchor = false;
             joint.connectedAnchor = grapplePoint;
 
-            //Grapple timemark 
             grappleStartTime = Time.time;
 
             float distanceFromPoint = Vector3.Distance(player.position, grapplePoint);
@@ -77,16 +98,29 @@ public class GrappleScript : MonoBehaviour
             joint.massScale = massScale;
 
             lr.positionCount = 2;
-
-            
         }
-
     }
 
     void StopGrapple()
     {
-        lr.positionCount = 0;
-        Destroy(joint);
+        if (joint != null)
+        {
+            float distanceToPoint = Vector3.Distance(player.position, grapplePoint);
+
+            if (distanceToPoint <= joint.minDistance + 7f) // slingshot effect applies at near push end distance, and close to max range
+            {
+                Vector3 launchDir = grapplePoint - player.position;
+                launchDir.y *= 0.1f; // reduce vertical component of the direction
+                launchDir = launchDir.normalized;
+                Rigidbody rb = player.GetComponent<Rigidbody>();
+                rb.AddForce(launchDir * grappleBoostForce, ForceMode.VelocityChange);
+
+                Debug.Log("<color=cyan>Grapple BOOST!</color>");
+            }
+
+            lr.positionCount = 0;
+            Destroy(joint);
+        }
     }
 
     public bool IsGrappling()
@@ -101,12 +135,9 @@ public class GrappleScript : MonoBehaviour
 
     void DrawRope() 
     {
-        //if not grapple , no draw rope
-        if(joint == null) return;
+        if (joint == null) return;
         
         lr.SetPosition(0, grappleTip.position);
         lr.SetPosition(1, grapplePoint);
     }
-
-
-} // Class
+}
