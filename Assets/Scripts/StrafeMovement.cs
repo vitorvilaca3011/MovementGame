@@ -39,11 +39,27 @@ public class StrafeMovement : MonoBehaviour
     private float jumpPressDuration = 0.1f;
 	private bool onGround = false;
 
+    [Header("Crouch Settings")]
+    [SerializeField] private float crouchHeight = 1f;
+    [SerializeField] private float standHeight = 2f;
+    [SerializeField] private float crouchSpeed = 0.5f;
+    [SerializeField] private KeyCode crouchKey = KeyCode.LeftControl;
+
+    private CapsuleCollider col;
+    private bool isCrouching = false;
+
+    [Header("Crouch Visual Settings")]
+    [SerializeField] private Transform camTransform; // ref cam
+    [SerializeField] private float standingCamY = 1.6f;
+    [SerializeField] private float crouchingCamY = 1.0f;
+    [SerializeField] private float crouchLerpSpeed = 8f;
+
     private void Awake()
     {
         // Get references
         rb = GetComponent<Rigidbody>();
         playerTransform = transform;
+        col = GetComponent<CapsuleCollider>();
     }
 
     private void Update()
@@ -58,11 +74,13 @@ public class StrafeMovement : MonoBehaviour
 
         if (grappleScript.IsGrappling())
         {
-            // Permitir movimentação lateral com força reduzida
+            // alow lateral movement while grappling
             Vector3 input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             Vector3 move = playerTransform.TransformDirection(input) * grappleMovementMultiplier;
             rb.AddForce(move, ForceMode.Acceleration);
         }
+
+        HandleCrouch();
 
     }
 
@@ -178,4 +196,22 @@ public class StrafeMovement : MonoBehaviour
         bool result = Physics.Raycast(ray, GetComponent<Collider>().bounds.extents.y + 0.1f, groundLayers);
         return result;
 	}
+
+    void HandleCrouch()
+    {
+        if (Input.GetKeyDown(crouchKey))
+        {
+            col.height = crouchHeight;
+            isCrouching = true;
+            float targetY = isCrouching ? crouchingCamY : standingCamY;
+            Vector3 camPosition = camTransform.localPosition;
+            camPosition.y = Mathf.Lerp(camPosition.y, targetY, Time.deltaTime * crouchLerpSpeed);
+            camTransform.localPosition = camPosition;
+        }
+        else if (Input.GetKeyUp(crouchKey))
+        {
+            col.height = standHeight;
+            isCrouching = false;
+        }
+    }
 }
