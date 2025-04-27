@@ -3,7 +3,7 @@
 public class StrafeMovement : MonoBehaviour
 {
     #region referencias
-    
+
     [Header("References")]
     [SerializeField]
     private GrappleScript grappleScript;
@@ -11,83 +11,105 @@ public class StrafeMovement : MonoBehaviour
     private Rigidbody rb;
     [SerializeField]
     private Transform playerTransform;
+
     #endregion
 
     #region Movement
+
     [Header("Movement")]
     [SerializeField]
-    private float accel = 200f;         // How fast the player accelerates on the ground
+    private float accel = 200f;
     [SerializeField]
-    public float airAccel = 200f;      // How fast the player accelerates in the air
+    public float airAccel = 200f;
     [SerializeField]
-    private float maxSpeed = 6.4f;      // Maximum player speed on the ground
+    private float maxSpeed = 6.4f;
     [SerializeField]
-    private float maxAirSpeed = 0.6f;   // "Maximum" player speed in the air
+    private float maxAirSpeed = 0.6f;
     [SerializeField]
-    private float friction = 8f;        // How fast the player decelerates on the ground
+    private float friction = 8f;
     [SerializeField]
-    private float jumpForce = 5f;       // How high the player jumps
-    [SerializeField]
-    private LayerMask groundLayers;
+    private float jumpForce = 5f;
     [SerializeField]
     private float grappleMovementMultiplier = 0.4f;
-    
+
     [SerializeField]
     private GameObject camObj;
 
     private float lastJumpPress = -1f;
     private float jumpPressDuration = 0.1f;
-	private bool onGround = false;
+    private bool onGround = false;
+
     #endregion
 
     #region Crouch
 
-    
     [Header("Crouch Settings")]
-    [SerializeField] private float crouchHeight = 1f;
-    [SerializeField] private float standHeight = 2f;
-    [SerializeField] private float crouchSpeed = 0.5f;
-    [SerializeField] private KeyCode crouchKey = KeyCode.LeftControl;
+    [SerializeField]
+    private float crouchHeight = 1f;
+    [SerializeField]
+    private float standHeight = 2f;
+    [SerializeField]
+    private float crouchSpeed = 0.5f;
+    [SerializeField]
+    private KeyCode crouchKey = KeyCode.LeftControl;
 
     private CapsuleCollider col;
     private bool isCrouching = false;
 
     [Header("Crouch Visual Settings")]
-    [SerializeField] private Transform camTransform; // ref cam
-    [SerializeField] private float standingCamY = 1.6f;
-    [SerializeField] private float crouchingCamY = 1.0f;
-    [SerializeField] private float crouchLerpSpeed = 8f;
+    [SerializeField]
+    private Transform camTransform;
+    [SerializeField]
+    private float standingCamY = 1.6f;
+    [SerializeField]
+    private float crouchingCamY = 1.0f;
+    [SerializeField]
+    private float crouchLerpSpeed = 8f;
+
     #endregion
-    
+
     #region SFX
-    
+
     [Header("SFXs")]
-    
+
     [Header("Wind Sound Settings")]
-    [SerializeField] private AudioSource windAudio;
-    [SerializeField] private float windStartSpeed = 15f;
-    [SerializeField] private float windMaxSpeed = 40f;
-    [SerializeField] private float maxWindVolume = 0.7f;
-    [SerializeField] private float windLerpSpeed = 3f;
-    [SerializeField] private float minAirHeightForWind = 2f;
+    [SerializeField]
+    private AudioSource windAudio;
+    [SerializeField]
+    private float windStartSpeed = 15f;
+    [SerializeField]
+    private float windMaxSpeed = 40f;
+    [SerializeField]
+    private float maxWindVolume = 0.7f;
+    [SerializeField]
+    private float windLerpSpeed = 3f;
+    [SerializeField]
+    private float minAirHeightForWind = 2f;
 
     [Header("Landing Sound")]
-    [SerializeField] private AudioSource landAudio;
-    [SerializeField] private AudioClip[] landClips;
-    [SerializeField] private float minLandPitch = 0.85f;
-    [SerializeField] private float maxLandPitch = 1.15f;
-    [SerializeField] private float minLandVolume = 0.8f;
-    [SerializeField] private float maxLandVolume = 1.0f;
+    [SerializeField]
+    private AudioSource landAudio;
+    [SerializeField]
+    private AudioClip[] landClips;
+    [SerializeField]
+    private float minLandPitch = 0.85f;
+    [SerializeField]
+    private float maxLandPitch = 1.15f;
+    [SerializeField]
+    private float minLandVolume = 0.8f;
+    [SerializeField]
+    private float maxLandVolume = 1.0f;
+    [SerializeField]
+    private float landingSoundCooldown = 0.2f;
+    private float lastLandingTime = -1f;
 
     private bool wasGrounded = true;
 
-
     #endregion
+
     private void Awake()
     {
         wasGrounded = CheckGround();
-        
-        // Get references
         rb = GetComponent<Rigidbody>();
         playerTransform = transform;
         col = GetComponent<CapsuleCollider>();
@@ -95,81 +117,60 @@ public class StrafeMovement : MonoBehaviour
 
     private void Update()
     {
-        // console debugger print(new Vector3(GetComponent<Rigidbody>().velocity.x, 0f, GetComponent<Rigidbody>().velocity.z).magnitude);
         if (Input.GetButton("Jump"))
-		{
-			lastJumpPress = Time.time;
-		}
-
-        //Lateral movment grapple
+        {
+            lastJumpPress = Time.time;
+        }
 
         if (grappleScript.IsGrappling())
         {
-            // alow lateral movement while grappling
             Vector3 input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             Vector3 move = playerTransform.TransformDirection(input) * grappleMovementMultiplier;
             rb.AddForce(move, ForceMode.Acceleration);
         }
 
-        HandleCrouch();
+        Crouch();
 
-        // Wind sound effect
-        float speed = rb.velocity.magnitude; // Get the speed of the player
-
-        bool inAir = !CheckGround() && GetAirHeight() > minAirHeightForWind; // Check if the player is in the air
+        float speed = rb.velocity.magnitude;
+        bool inAir = !CheckGround() && GetAirHeight() > minAirHeightForWind;
 
         if (inAir)
         {
             float t = Mathf.InverseLerp(windStartSpeed, windMaxSpeed, speed);
             float targetVolume = Mathf.Lerp(0f, maxWindVolume, t);
-
             windAudio.volume = Mathf.Lerp(windAudio.volume, targetVolume, Time.deltaTime * windLerpSpeed);
         }
         else
         {
-            // if the player is on the ground, fade out the wind sound
             windAudio.volume = Mathf.Lerp(windAudio.volume, 0f, Time.deltaTime * windLerpSpeed);
         }
-
     }
 
     public void FixedUpdate()
-	{
+    {
+        Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-		Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-
-        // Get player velocity
-        Vector3 playerVelocity = GetComponent<Rigidbody>().velocity;
-        // Slow down if on ground
+        Vector3 playerVelocity = rb.velocity;
         playerVelocity = CalculateFriction(playerVelocity);
-        // Add player input
         playerVelocity += CalculateMovement(input, playerVelocity);
-        // Assign new velocity to player object
-		GetComponent<Rigidbody>().velocity = playerVelocity;
+        rb.velocity = playerVelocity;
 
-        //landing sound effect
         bool nearGround = CheckNearGround();
 
         if (!wasGrounded && nearGround)
         {
-            if (rb.velocity.y < -1f) // ou qualquer limite pra não tocar à toa
-            {
-                PlayLandingSound();
-            }
+            PlayLandingSound();
         }
 
         wasGrounded = nearGround;
     }
- #region movement
-    /// <summary>
-    /// Slows down the player if on ground
-    /// </summary>
-    /// <param name="currentVelocity">Velocity of the player</param>
-    /// <returns>Modified velocity of the player</returns>
-	private Vector3 CalculateFriction(Vector3 currentVelocity)
-	{
+
+    #region Movement
+
+    private Vector3 CalculateFriction(Vector3 currentVelocity)
+    {
         onGround = CheckGround();
-		float speed = currentVelocity.magnitude;
+        float speed = currentVelocity.magnitude;
 
         if (!onGround || Input.GetButton("Jump") || speed == 0f)
             return currentVelocity;
@@ -177,105 +178,57 @@ public class StrafeMovement : MonoBehaviour
         float drop = speed * friction * Time.deltaTime;
         return currentVelocity * (Mathf.Max(speed - drop, 0f) / speed);
     }
-    
-    /// <summary>
-    /// Moves the player according to the input. (THIS IS WHERE THE STRAFING MECHANIC HAPPENS)
-    /// </summary>
-    /// <param name="input">Horizontal and vertical axis of the user input</param>
-    /// <param name="velocity">Current velocity of the player</param>
-    /// <returns>Additional velocity of the player</returns>
-	private Vector3 CalculateMovement(Vector2 input, Vector3 velocity)
-	{
+
+    private Vector3 CalculateMovement(Vector2 input, Vector3 velocity)
+    {
         onGround = CheckGround();
 
-        //Different acceleration values for ground and air
-        float curAccel = accel;
-        if (!onGround)
-            curAccel = airAccel;
+        float curAccel = onGround ? accel : airAccel;
+        float curMaxSpeed = onGround ? maxSpeed : maxAirSpeed;
 
-        //Ground speed
-        float curMaxSpeed = maxSpeed;
-
-        //Air speed
-        if (!onGround)
-            curMaxSpeed = maxAirSpeed;
-        
-        //Get rotation input and make it a vector
         Vector3 camRotation = new Vector3(0f, camObj.transform.rotation.eulerAngles.y, 0f);
         Vector3 inputVelocity = Quaternion.Euler(camRotation) *
                                 new Vector3(input.x * curAccel, 0f, input.y * curAccel);
 
-        //Ignore vertical component of rotated input
         Vector3 alignedInputVelocity = new Vector3(inputVelocity.x, 0f, inputVelocity.z) * Time.deltaTime;
-
-        //Get current velocity
         Vector3 currentVelocity = new Vector3(velocity.x, 0f, velocity.z);
 
-        //How close the current speed to max velocity is (1 = not moving, 0 = at/over max speed)
         float max = Mathf.Max(0f, 1 - (currentVelocity.magnitude / curMaxSpeed));
-
-        //How perpendicular the input to the current velocity is (0 = 90°)
         float velocityDot = Vector3.Dot(currentVelocity, alignedInputVelocity);
 
-        //Scale the input to the max speed
         Vector3 modifiedVelocity = alignedInputVelocity * max;
-
-        //The more perpendicular the input is, the more the input velocity will be applied
         Vector3 correctVelocity = Vector3.Lerp(alignedInputVelocity, modifiedVelocity, velocityDot);
 
-        //Apply jump
         correctVelocity += GetJumpVelocity(velocity.y);
 
-        //Return
         return correctVelocity;
     }
 
-    /// <summary>
-    /// Calculates the velocity with which the player is accelerated up when jumping
-    /// </summary>
-    /// <param name="yVelocity">Current "up" velocity of the player (velocity.y)</param>
-    /// <returns>Additional jump velocity for the player</returns>
-	private Vector3 GetJumpVelocity(float yVelocity)
-	{
-		Vector3 jumpVelocity = Vector3.zero;
+    private Vector3 GetJumpVelocity(float yVelocity)
+    {
+        Vector3 jumpVelocity = Vector3.zero;
 
-		if(Time.time < lastJumpPress + jumpPressDuration && yVelocity < jumpForce && CheckGround())
-		{
-			lastJumpPress = -1f;
-			jumpVelocity = new Vector3(0f, jumpForce - yVelocity, 0f);
-		}
+        if (Time.time < lastJumpPress + jumpPressDuration && yVelocity < jumpForce && CheckGround())
+        {
+            lastJumpPress = -1f;
+            jumpVelocity = new Vector3(0f, jumpForce - yVelocity, 0f);
+        }
 
-		return jumpVelocity;
-	}
-	
-    /// <summary>
-    /// Checks if the player is touching the ground. This is a quick hack to make it work, don't actually do it like this.
-    /// </summary>
-    /// <returns>True if the player touches the ground, false if not</returns>
-	private bool CheckGround()
-	{
+        return jumpVelocity;
+    }
+
+    private bool CheckGround()
+    {
         float rayDistance = GetComponent<Collider>().bounds.extents.y + 0.05f;
         Vector3 rayOrigin = transform.position + Vector3.up * 0.1f;
 
-        return Physics.SphereCast(rayOrigin, 0.3f, Vector3.down, out _, rayDistance, groundLayers);
-        
-        /*Ray ray = new Ray(transform.position, Vector3.down);
-        bool result = Physics.Raycast(ray, GetComponent<Collider>().bounds.extents.y + 0.1f, groundLayers);
-        return result;*/
-	}
+        return Physics.SphereCast(rayOrigin, 0.3f, Vector3.down, out RaycastHit hit, rayDistance) &&
+               hit.collider.CompareTag("Ground");
+    }
 
     #endregion
 
-    private bool CheckNearGround()
-    {
-        float extraDistance = 0.3f; // mais generoso
-        float rayDistance = GetComponent<Collider>().bounds.extents.y + extraDistance;
-        Vector3 rayOrigin = transform.position + Vector3.up * 0.1f;
-
-        return Physics.SphereCast(rayOrigin, 0.3f, Vector3.down, out _, rayDistance, groundLayers);
-    }
-
-    void HandleCrouch()
+    private void Crouch()
     {
         if (Input.GetKeyDown(crouchKey))
         {
@@ -296,38 +249,32 @@ public class StrafeMovement : MonoBehaviour
     private float GetAirHeight()
     {
         Ray ray = new Ray(transform.position, Vector3.down);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, 100f, groundLayers))
+        if (Physics.Raycast(ray, out RaycastHit hit, 100f))
         {
             return hit.distance;
         }
 
-        return Mathf.Infinity; // If no hit, return a large value 
+        return Mathf.Infinity;
     }
 
-    //! landing sound effect
+    //! Landing sound effect
     private void PlayLandingSound()
     {
-        if (landClips.Length == 0) return;
-
-        // minimum fall speed to play landing sound
-        if (rb.velocity.y > -1f) return;
+        if (landClips.Length == 0 || rb.velocity.y > -1f) return;
 
         landAudio.pitch = Random.Range(minLandPitch, maxLandPitch);
         landAudio.volume = Random.Range(minLandVolume, maxLandVolume);
         landAudio.PlayOneShot(landClips[Random.Range(0, landClips.Length)]);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private bool CheckNearGround()
     {
-        if (((1 << collision.gameObject.layer) & groundLayers) != 0)
-        {
-            if (rb.velocity.y < -1f) // só se caiu com uma certa força
-            {
-                PlayLandingSound();
-            }
-        }
+        float extraDistance = 0.3f;
+        float rayDistance = GetComponent<Collider>().bounds.extents.y + extraDistance;
+        Vector3 rayOrigin = transform.position + Vector3.up * 0.1f;
+
+        return Physics.SphereCast(rayOrigin, 0.3f, Vector3.down, out RaycastHit hit, rayDistance) &&
+               hit.collider.CompareTag("Ground");
     }
     //!
 }
