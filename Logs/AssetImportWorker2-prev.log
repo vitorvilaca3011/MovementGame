@@ -1,0 +1,826 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.43f1 (85497d293fa1) revision 8735101'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26100) 64bit Professional' Language: 'en' Physical Memory: 24465 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\2022.3.43f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+J:/MovementGame
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+52026
+Successfully changed project path to: J:/MovementGame
+J:/MovementGame
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [2168]  Target information:
+
+Player connection [2168]  * "[IP] 192.168.15.110 [Port] 0 [Flags] 2 [Guid] 1544878743 [EditorId] 1544878743 [Version] 1048832 [Id] WindowsEditor(7,vipor) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [2168] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [2168] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+Refreshing native plugins compatible for Editor in 16.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.43f1 (85497d293fa1)
+[Subsystems] Discovering subsystems at path D:/Unity/2022.3.43f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path J:/MovementGame/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon RX 6600 (ID=0x73ff)
+    Vendor:   ATI
+    VRAM:     8121 MB
+    Driver:   32.0.13031.8021
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Initialize mono
+Mono path[0] = 'D:/Unity/2022.3.43f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2022.3.43f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/2022.3.43f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56804
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/2022.3.43f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003396 seconds.
+- Loaded All Assemblies, in  0.401 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.308 seconds
+Domain Reload Profiling: 710ms
+	BeginReloadAssembly (121ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (65ms)
+	LoadAllAssembliesAndSetupDomain (160ms)
+		LoadAssemblies (119ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (158ms)
+			TypeCache.Refresh (156ms)
+				TypeCache.ScanAssembly (139ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (309ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (252ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (168ms)
+			ProcessInitializeOnLoadMethodAttributes (63ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.930 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.882 seconds
+Domain Reload Profiling: 1811ms
+	BeginReloadAssembly (169ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (50ms)
+	LoadAllAssembliesAndSetupDomain (658ms)
+		LoadAssemblies (462ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (292ms)
+			TypeCache.Refresh (242ms)
+				TypeCache.ScanAssembly (222ms)
+			ScanForSourceGeneratedMonoScriptInfo (35ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (883ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (726ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (109ms)
+			ProcessInitializeOnLoadAttributes (375ms)
+			ProcessInitializeOnLoadMethodAttributes (226ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Failed to load shader (instanceID 570, GUID c8b6a681c7b4e2e4785ffab093907f9e)
+Failed to load shader (instanceID 518, GUID a16365e8c873daa4c94919438490b905)
+Failed to load shader (instanceID 544, GUID 5caf62d8bd7c44596ace77ef9eb8ea31)
+Failed to load shader (instanceID 554, GUID 77cfa04f893eb8745b6a454a3d51b43c)
+Failed to load shader (instanceID 588, GUID 19dfbb09098c9584a83c956fbd6c5d79)
+Failed to load shader (instanceID 520, GUID 0d0f817524897904ba47a6a1d55e7668)
+Failed to load shader (instanceID 574, GUID da07703fcc09f8d4799221050659bd55)
+Failed to load shader (instanceID 590, GUID 2df96b66b5510f94b98df2ac6f926ef4)
+Failed to load shader (instanceID 516, GUID 61e53729ad706d049b12a441f328fe34)
+Failed to load shader (instanceID 534, GUID 36e335017ad71d54fbb10842863188ae)
+Failed to load shader (instanceID 530, GUID 50b406436c6214c49aaaa6011b71dde8)
+Failed to load shader (instanceID 522, GUID 4386e57b23a56004c93e1d57d2bbcb4f)
+Failed to load shader (instanceID 524, GUID 95e15a77195eb574ab82aaac18b1c796)
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 13.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4315 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (0.7 MB). Loaded Objects now: 4804.
+Memory consumption went from 187.6 MB to 186.9 MB.
+Total: 14.304300 ms (FindLiveObjects: 0.931400 ms CreateObjectMapping: 0.506200 ms MarkObjects: 12.267000 ms  DeleteObjects: 0.597100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 59921.298621 seconds.
+  path: Assets/NormalURP.mat
+  artifactKey: Guid(6d8715bdd2f5487408e35949bd7049c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NormalURP.mat using Guid(6d8715bdd2f5487408e35949bd7049c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '680567ecdb2a511ebce0342f14f5a3a3') in 0.137915 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 235.870576 seconds.
+  path: Assets/Materials/TetrisFloor.mat
+  artifactKey: Guid(e15aa4ed32953c446aa20488508aa66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TetrisFloor.mat using Guid(e15aa4ed32953c446aa20488508aa66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '5df069935abc5b26d86b3b22fe030d02') in 0.012143 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Textures/TetrisFloorNormal.png
+  artifactKey: Guid(343215893fca0fb4e9b321736b9ab6e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/TetrisFloorNormal.png using Guid(343215893fca0fb4e9b321736b9ab6e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '1c4cd5e0af1850256ff073b44e052481') in 0.033927 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 7.552334 seconds.
+  path: Assets/Images/GrappleIndicator.png
+  artifactKey: Guid(35f9cf3217f509b4fb7ead96465d9159) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/GrappleIndicator.png using Guid(35f9cf3217f509b4fb7ead96465d9159) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '9c5f56904dd58692532565037aa238ef') in 0.031056 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Images/Mira.png
+  artifactKey: Guid(b598de28d312e3d4096fd9eba5621c67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/Mira.png using Guid(b598de28d312e3d4096fd9eba5621c67) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'fedc9afba123fd543d88d9cb14029116') in 0.009933 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 83.951645 seconds.
+  path: Assets/New Universal Render Pipeline Asset 1_Renderer.asset
+  artifactKey: Guid(8d4460dad8c1d8e47826d7b9649ec769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Universal Render Pipeline Asset 1_Renderer.asset using Guid(8d4460dad8c1d8e47826d7b9649ec769) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'd5096eacbf45fed6df64badf4f8ae546') in 0.001033 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Prepare
+Switching render pipeline 51023dc80a62727489e894eecb095420 -> 00000000000000000000000000000000
+Failed to load shader (instanceID 570, GUID c8b6a681c7b4e2e4785ffab093907f9e)
+Failed to load shader (instanceID 518, GUID a16365e8c873daa4c94919438490b905)
+Failed to load shader (instanceID 544, GUID 5caf62d8bd7c44596ace77ef9eb8ea31)
+Failed to load shader (instanceID 554, GUID 77cfa04f893eb8745b6a454a3d51b43c)
+Failed to load shader (instanceID 588, GUID 19dfbb09098c9584a83c956fbd6c5d79)
+Failed to load shader (instanceID 520, GUID 0d0f817524897904ba47a6a1d55e7668)
+Failed to load shader (instanceID 574, GUID da07703fcc09f8d4799221050659bd55)
+Failed to load shader (instanceID 590, GUID 2df96b66b5510f94b98df2ac6f926ef4)
+Failed to load shader (instanceID 516, GUID 61e53729ad706d049b12a441f328fe34)
+Failed to load shader (instanceID 534, GUID 36e335017ad71d54fbb10842863188ae)
+Failed to load shader (instanceID 530, GUID 50b406436c6214c49aaaa6011b71dde8)
+Failed to load shader (instanceID 522, GUID 4386e57b23a56004c93e1d57d2bbcb4f)
+Failed to load shader (instanceID 524, GUID 95e15a77195eb574ab82aaac18b1c796)
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Refreshing native plugins compatible for Editor in 5.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6 unused Assets / (0.6 MB). Loaded Objects now: 4849.
+Memory consumption went from 110.1 MB to 109.4 MB.
+Total: 10.436100 ms (FindLiveObjects: 0.320700 ms CreateObjectMapping: 0.118200 ms MarkObjects: 9.634500 ms  DeleteObjects: 0.360900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 9.946867 seconds.
+  path: Assets/NoFriction.physicMaterial
+  artifactKey: Guid(efbc6e9a8faae7345bad85950214c9d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NoFriction.physicMaterial using Guid(efbc6e9a8faae7345bad85950214c9d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '792d7b97ba5c4c75f2402e7de950482b') in 0.001013 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/New Terrain.asset
+  artifactKey: Guid(419bdf7dddfe14d40aa57b8f8a7fc6ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Terrain.asset using Guid(419bdf7dddfe14d40aa57b8f8a7fc6ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'd88f94f5aef37764ea573d5439d5f82f') in 0.005782 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 12.494153 seconds.
+  path: Assets/New Custom Universal Renderer Data.asset
+  artifactKey: Guid(db3781f0d10097f4ba3b749b2e51ca50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Custom Universal Renderer Data.asset using Guid(db3781f0d10097f4ba3b749b2e51ca50) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'ca116aa24d70cdb2883b54e6e7d586be') in 0.000974 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 52.561849 seconds.
+  path: Assets/UniversalRenderPipelineGlobalSettings 1.asset
+  artifactKey: Guid(ee2352768c3fa3045b435ab55f79cfef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineGlobalSettings 1.asset using Guid(ee2352768c3fa3045b435ab55f79cfef) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '20cf62ec99072fe22dbff36dcc91e126') in 0.000843 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 8.027762 seconds.
+  path: Assets/UniversalRenderPipelineGlobalSettings 2.asset
+  artifactKey: Guid(79bc82059b3fc30439e838e20821ffac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineGlobalSettings 2.asset using Guid(79bc82059b3fc30439e838e20821ffac) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '685ce66acea08e877ea59f26b96e3891') in 0.000897 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 54.567315 seconds.
+  path: Assets/New Universal Render Pipeline Asset_Renderer.asset
+  artifactKey: Guid(0f0941042c296ab4a8919bf5e519a9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Universal Render Pipeline Asset_Renderer.asset using Guid(0f0941042c296ab4a8919bf5e519a9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '942a989ba25a208f5be4af79f6bebd99') in 0.000992 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 180.513217 seconds.
+  path: Assets/CustomRenderPassFeature.cs
+  artifactKey: Guid(7a0cd31974c2ec74d8765bf53e8007f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CustomRenderPassFeature.cs using Guid(7a0cd31974c2ec74d8765bf53e8007f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'bbe33b2b165c831673daa2c9afb0a887') in 0.000781 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.511 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.128 seconds
+Domain Reload Profiling: 1638ms
+	BeginReloadAssembly (169ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (59ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (277ms)
+		LoadAssemblies (322ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (21ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (1129ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (642ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (103ms)
+			ProcessInitializeOnLoadAttributes (295ms)
+			ProcessInitializeOnLoadMethodAttributes (230ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Failed to load shader (instanceID 570, GUID c8b6a681c7b4e2e4785ffab093907f9e)
+Failed to load shader (instanceID 518, GUID a16365e8c873daa4c94919438490b905)
+Failed to load shader (instanceID 544, GUID 5caf62d8bd7c44596ace77ef9eb8ea31)
+Failed to load shader (instanceID 554, GUID 77cfa04f893eb8745b6a454a3d51b43c)
+Failed to load shader (instanceID 588, GUID 19dfbb09098c9584a83c956fbd6c5d79)
+Failed to load shader (instanceID 520, GUID 0d0f817524897904ba47a6a1d55e7668)
+Failed to load shader (instanceID 574, GUID da07703fcc09f8d4799221050659bd55)
+Failed to load shader (instanceID 590, GUID 2df96b66b5510f94b98df2ac6f926ef4)
+Failed to load shader (instanceID 516, GUID 61e53729ad706d049b12a441f328fe34)
+Failed to load shader (instanceID 534, GUID 36e335017ad71d54fbb10842863188ae)
+Failed to load shader (instanceID 530, GUID 50b406436c6214c49aaaa6011b71dde8)
+Failed to load shader (instanceID 522, GUID 4386e57b23a56004c93e1d57d2bbcb4f)
+Failed to load shader (instanceID 524, GUID 95e15a77195eb574ab82aaac18b1c796)
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Refreshing native plugins compatible for Editor in 5.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4242 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 22 unused Assets / (0.7 MB). Loaded Objects now: 4851.
+Memory consumption went from 175.8 MB to 175.1 MB.
+Total: 8.435500 ms (FindLiveObjects: 0.492900 ms CreateObjectMapping: 0.141700 ms MarkObjects: 7.471300 ms  DeleteObjects: 0.328700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 10.271282 seconds.
+  path: Assets/SFX/landing.mp3
+  artifactKey: Guid(67821500f7d69e14894ee2e567565516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SFX/landing.mp3 using Guid(67821500f7d69e14894ee2e567565516) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '2da41c0a9202eb8fbc8730a73519094c') in 0.067994 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 67.005433 seconds.
+  path: Assets/New 2D Renderer Data.asset
+  artifactKey: Guid(67c5664dcc8a20347a000ac0ebd3bcd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New 2D Renderer Data.asset using Guid(67c5664dcc8a20347a000ac0ebd3bcd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'b8f3504196ab1d43923c51b94893f839') in 0.000914 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 118.522909 seconds.
+  path: Assets/Textures/TetrisFloor.png
+  artifactKey: Guid(c108995aec26a0540b4585fb546f4190) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/TetrisFloor.png using Guid(c108995aec26a0540b4585fb546f4190) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '15ac6115d6b0081f8dd597ed31e4ea7c') in 0.017697 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Prepare
+Failed to load shader (instanceID 570, GUID c8b6a681c7b4e2e4785ffab093907f9e)
+Failed to load shader (instanceID 518, GUID a16365e8c873daa4c94919438490b905)
+Failed to load shader (instanceID 544, GUID 5caf62d8bd7c44596ace77ef9eb8ea31)
+Failed to load shader (instanceID 554, GUID 77cfa04f893eb8745b6a454a3d51b43c)
+Failed to load shader (instanceID 588, GUID 19dfbb09098c9584a83c956fbd6c5d79)
+Failed to load shader (instanceID 520, GUID 0d0f817524897904ba47a6a1d55e7668)
+Failed to load shader (instanceID 574, GUID da07703fcc09f8d4799221050659bd55)
+Failed to load shader (instanceID 590, GUID 2df96b66b5510f94b98df2ac6f926ef4)
+Failed to load shader (instanceID 516, GUID 61e53729ad706d049b12a441f328fe34)
+Failed to load shader (instanceID 534, GUID 36e335017ad71d54fbb10842863188ae)
+Failed to load shader (instanceID 530, GUID 50b406436c6214c49aaaa6011b71dde8)
+Failed to load shader (instanceID 522, GUID 4386e57b23a56004c93e1d57d2bbcb4f)
+Failed to load shader (instanceID 524, GUID 95e15a77195eb574ab82aaac18b1c796)
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Refreshing native plugins compatible for Editor in 6.18 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5 unused Assets / (0.6 MB). Loaded Objects now: 4855.
+Memory consumption went from 110.1 MB to 109.5 MB.
+Total: 9.711400 ms (FindLiveObjects: 0.343700 ms CreateObjectMapping: 0.138700 ms MarkObjects: 8.837500 ms  DeleteObjects: 0.390300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 77.352262 seconds.
+  path: Assets/New Universal Render Pipeline Asset.asset
+  artifactKey: Guid(51023dc80a62727489e894eecb095420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Universal Render Pipeline Asset.asset using Guid(51023dc80a62727489e894eecb095420) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '90d7d028856a864335354ad08f901d84') in 0.000777 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Switching render pipeline 51023dc80a62727489e894eecb095420 -> 00000000000000000000000000000000
+Failed to load shader (instanceID 570, GUID c8b6a681c7b4e2e4785ffab093907f9e)
+Failed to load shader (instanceID 518, GUID a16365e8c873daa4c94919438490b905)
+Failed to load shader (instanceID 544, GUID 5caf62d8bd7c44596ace77ef9eb8ea31)
+Failed to load shader (instanceID 554, GUID 77cfa04f893eb8745b6a454a3d51b43c)
+Failed to load shader (instanceID 588, GUID 19dfbb09098c9584a83c956fbd6c5d79)
+Failed to load shader (instanceID 520, GUID 0d0f817524897904ba47a6a1d55e7668)
+Failed to load shader (instanceID 574, GUID da07703fcc09f8d4799221050659bd55)
+Failed to load shader (instanceID 590, GUID 2df96b66b5510f94b98df2ac6f926ef4)
+Failed to load shader (instanceID 516, GUID 61e53729ad706d049b12a441f328fe34)
+Failed to load shader (instanceID 534, GUID 36e335017ad71d54fbb10842863188ae)
+Failed to load shader (instanceID 530, GUID 50b406436c6214c49aaaa6011b71dde8)
+Failed to load shader (instanceID 522, GUID 4386e57b23a56004c93e1d57d2bbcb4f)
+Failed to load shader (instanceID 524, GUID 95e15a77195eb574ab82aaac18b1c796)
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Refreshing native plugins compatible for Editor in 5.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6 unused Assets / (0.6 MB). Loaded Objects now: 4854.
+Memory consumption went from 110.1 MB to 109.4 MB.
+Total: 7.128300 ms (FindLiveObjects: 0.533700 ms CreateObjectMapping: 0.184400 ms MarkObjects: 6.117200 ms  DeleteObjects: 0.291900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 5.805173 seconds.
+  path: Assets/New Universal Render Pipeline Asset_Renderer 1.asset
+  artifactKey: Guid(cd9bf687e0ef4f047b053ef6cdcd231d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Universal Render Pipeline Asset_Renderer 1.asset using Guid(cd9bf687e0ef4f047b053ef6cdcd231d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+Error loading the file 'Assets/New Universal Render Pipeline Asset_Renderer 1.asset'. File is either empty or corrupted, please verify the file contents.
+ -> (artifact id: '39fe914737a260dbe1f3a6ce2d06f2e3') in 0.000728 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Failed to load shader (instanceID 570, GUID c8b6a681c7b4e2e4785ffab093907f9e)
+Failed to load shader (instanceID 518, GUID a16365e8c873daa4c94919438490b905)
+Failed to load shader (instanceID 544, GUID 5caf62d8bd7c44596ace77ef9eb8ea31)
+Failed to load shader (instanceID 554, GUID 77cfa04f893eb8745b6a454a3d51b43c)
+Failed to load shader (instanceID 588, GUID 19dfbb09098c9584a83c956fbd6c5d79)
+Failed to load shader (instanceID 520, GUID 0d0f817524897904ba47a6a1d55e7668)
+Failed to load shader (instanceID 574, GUID da07703fcc09f8d4799221050659bd55)
+Failed to load shader (instanceID 590, GUID 2df96b66b5510f94b98df2ac6f926ef4)
+Failed to load shader (instanceID 516, GUID 61e53729ad706d049b12a441f328fe34)
+Failed to load shader (instanceID 534, GUID 36e335017ad71d54fbb10842863188ae)
+Failed to load shader (instanceID 530, GUID 50b406436c6214c49aaaa6011b71dde8)
+Failed to load shader (instanceID 522, GUID 4386e57b23a56004c93e1d57d2bbcb4f)
+Failed to load shader (instanceID 524, GUID 95e15a77195eb574ab82aaac18b1c796)
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Refreshing native plugins compatible for Editor in 5.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5 unused Assets / (0.6 MB). Loaded Objects now: 4855.
+Memory consumption went from 110.1 MB to 109.5 MB.
+Total: 7.759700 ms (FindLiveObjects: 0.294200 ms CreateObjectMapping: 0.117600 ms MarkObjects: 7.030900 ms  DeleteObjects: 0.316000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 11.140210 seconds.
+  path: Assets/New Universal Render Pipeline Asset_Renderer.asset
+  artifactKey: Guid(0f0941042c296ab4a8919bf5e519a9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Universal Render Pipeline Asset_Renderer.asset using Guid(0f0941042c296ab4a8919bf5e519a9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+Error loading the file 'Assets/New Universal Render Pipeline Asset_Renderer.asset'. File is either empty or corrupted, please verify the file contents.
+ -> (artifact id: 'c25fe87e8e2406407dc48c55d636774b') in 0.000766 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.454792 seconds.
+  path: Assets/README.md
+  artifactKey: Guid(21bf2ea99ea2fdc46a73e0f3b8d3db15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/README.md using Guid(21bf2ea99ea2fdc46a73e0f3b8d3db15) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '34a1c08537cb9ef39117ad5d35c74b17') in 0.000969 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 11.081833 seconds.
+  path: Assets/SFX/landing.mp3
+  artifactKey: Guid(67821500f7d69e14894ee2e567565516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SFX/landing.mp3 using Guid(67821500f7d69e14894ee2e567565516) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '2c80d07f3562b0e509d87d57302d2e2e') in 0.005439 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 7.072820 seconds.
+  path: Assets/Outlines/ShaderGraphs
+  artifactKey: Guid(f62b49e59c51259458657d9f52dcafa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Outlines/ShaderGraphs using Guid(f62b49e59c51259458657d9f52dcafa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '9c602519ffb2fc4e3ce72fd13862e8e7') in 0.000518 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.492221 seconds.
+  path: Assets/Outlines/ShaderGraphs/ViewSpaceNormals.shadergraph
+  artifactKey: Guid(119d30df6852b9b438de65b6cc7fb015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Outlines/ShaderGraphs/ViewSpaceNormals.shadergraph using Guid(119d30df6852b9b438de65b6cc7fb015) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '02f6b2851a14883b40abaafe509e1385') in 0.000934 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 8.387699 seconds.
+  path: Assets/Outlines/ShaderGraphs/Outlines.shadergraph
+  artifactKey: Guid(c62c2a755f58ef8409e728cfcb6c4143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Outlines/ShaderGraphs/Outlines.shadergraph using Guid(c62c2a755f58ef8409e728cfcb6c4143) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'e8f4c8434f9261e8d5de50e6c5db28be') in 0.001034 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 1.375467 seconds.
+  path: Assets/Outlines/Scripts/RendererFeatures
+  artifactKey: Guid(501d2af7d6160c34f8a48119bcf66590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Outlines/Scripts/RendererFeatures using Guid(501d2af7d6160c34f8a48119bcf66590) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '8b6c97bb7325a3dea9a36c4b87edb410') in 0.000454 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Switching render pipeline 51023dc80a62727489e894eecb095420 -> 00000000000000000000000000000000
+Failed to load shader (instanceID 570, GUID c8b6a681c7b4e2e4785ffab093907f9e)
+Failed to load shader (instanceID 518, GUID a16365e8c873daa4c94919438490b905)
+Failed to load shader (instanceID 544, GUID 5caf62d8bd7c44596ace77ef9eb8ea31)
+Failed to load shader (instanceID 554, GUID 77cfa04f893eb8745b6a454a3d51b43c)
+Failed to load shader (instanceID 588, GUID 19dfbb09098c9584a83c956fbd6c5d79)
+Failed to load shader (instanceID 520, GUID 0d0f817524897904ba47a6a1d55e7668)
+Failed to load shader (instanceID 574, GUID da07703fcc09f8d4799221050659bd55)
+Failed to load shader (instanceID 590, GUID 2df96b66b5510f94b98df2ac6f926ef4)
+Failed to load shader (instanceID 516, GUID 61e53729ad706d049b12a441f328fe34)
+Failed to load shader (instanceID 534, GUID 36e335017ad71d54fbb10842863188ae)
+Failed to load shader (instanceID 530, GUID 50b406436c6214c49aaaa6011b71dde8)
+Failed to load shader (instanceID 522, GUID 4386e57b23a56004c93e1d57d2bbcb4f)
+Failed to load shader (instanceID 524, GUID 95e15a77195eb574ab82aaac18b1c796)
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Refreshing native plugins compatible for Editor in 7.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6 unused Assets / (0.7 MB). Loaded Objects now: 4854.
+Memory consumption went from 110.1 MB to 109.5 MB.
+Total: 7.100900 ms (FindLiveObjects: 0.435400 ms CreateObjectMapping: 0.149800 ms MarkObjects: 6.220700 ms  DeleteObjects: 0.293600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 94.744818 seconds.
+  path: Assets/Normal.shadergraph
+  artifactKey: Guid(48be082b17ac0f848994f259d489bbc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Normal.shadergraph using Guid(48be082b17ac0f848994f259d489bbc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '2a8e641eff2f08bd9b499baa000b4c48') in 0.000941 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 1.685065 seconds.
+  path: Assets/README.md
+  artifactKey: Guid(21bf2ea99ea2fdc46a73e0f3b8d3db15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/README.md using Guid(21bf2ea99ea2fdc46a73e0f3b8d3db15) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '111d189d2985a3055cc31d68d8d1de1b') in 0.000950 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 43.206739 seconds.
+  path: Assets/NormalURP.mat
+  artifactKey: Guid(6d8715bdd2f5487408e35949bd7049c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NormalURP.mat using Guid(6d8715bdd2f5487408e35949bd7049c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '7da9fed38ad257635b05c52e21a401fa') in 0.030066 seconds
+Number of updated asset objects reloaded before import = 64
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.529 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.137 seconds
+Domain Reload Profiling: 1665ms
+	BeginReloadAssembly (169ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (284ms)
+		LoadAssemblies (348ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (21ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1138ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (644ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (100ms)
+			ProcessInitializeOnLoadAttributes (298ms)
+			ProcessInitializeOnLoadMethodAttributes (232ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Failed to load shader (instanceID 570, GUID c8b6a681c7b4e2e4785ffab093907f9e)
+Failed to load shader (instanceID 518, GUID a16365e8c873daa4c94919438490b905)
+Failed to load shader (instanceID 544, GUID 5caf62d8bd7c44596ace77ef9eb8ea31)
+Failed to load shader (instanceID 554, GUID 77cfa04f893eb8745b6a454a3d51b43c)
+Failed to load shader (instanceID 588, GUID 19dfbb09098c9584a83c956fbd6c5d79)
+Failed to load shader (instanceID 520, GUID 0d0f817524897904ba47a6a1d55e7668)
+Failed to load shader (instanceID 574, GUID da07703fcc09f8d4799221050659bd55)
+Failed to load shader (instanceID 590, GUID 2df96b66b5510f94b98df2ac6f926ef4)
+Failed to load shader (instanceID 516, GUID 61e53729ad706d049b12a441f328fe34)
+Failed to load shader (instanceID 534, GUID 36e335017ad71d54fbb10842863188ae)
+Failed to load shader (instanceID 530, GUID 50b406436c6214c49aaaa6011b71dde8)
+Failed to load shader (instanceID 522, GUID 4386e57b23a56004c93e1d57d2bbcb4f)
+Failed to load shader (instanceID 524, GUID 95e15a77195eb574ab82aaac18b1c796)
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Refreshing native plugins compatible for Editor in 6.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4306 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 84 unused Assets / (5.9 MB). Loaded Objects now: 4794.
+Memory consumption went from 189.1 MB to 183.2 MB.
+Total: 8.607200 ms (FindLiveObjects: 0.403500 ms CreateObjectMapping: 0.133000 ms MarkObjects: 5.690200 ms  DeleteObjects: 2.378800 ms)
+
+Shader 'Hidden/Universal Render Pipeline/FallbackError': fallback shader 'Hidden/Core/FallbackError' not found
+Prepare: number of updated asset objects reloaded= 2
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 72b91833f83ae208fae7752999fa3104 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 372.167603 seconds.
+  path: Assets/sla_Renderer.asset
+  artifactKey: Guid(ace909cc173ce384cb264a858a0d5ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/sla_Renderer.asset using Guid(ace909cc173ce384cb264a858a0d5ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'a699439fc4224854706ddc8f4c041a1e') in 0.003400 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
