@@ -390,6 +390,7 @@
 "Assets/Scripts/PlayerScripts/CameraFOV.cs"
 "Assets/Scripts/PlayerScripts/CameraPlayer.cs"
 "Assets/Scripts/PlayerScripts/GrappleScript.cs"
+"Assets/Scripts/PlayerScripts/JumpingPad.cs"
 "Assets/Scripts/PlayerScripts/MouseLook.cs"
 "Assets/Scripts/PlayerScripts/RotateGrapple.cs"
 "Assets/Scripts/PlayerScripts/SpeedDisplay.cs"
