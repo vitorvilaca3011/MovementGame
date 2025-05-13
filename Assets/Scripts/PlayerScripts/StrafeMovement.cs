@@ -32,12 +32,34 @@ public class StrafeMovement : MonoBehaviour
     [SerializeField]
     private float grappleMovementMultiplier = 0.4f;
 
+
+
     [SerializeField]
     private GameObject camObj;
 
     private float lastJumpPress = -1f;
     private float jumpPressDuration = 0.1f;
     private bool onGround = false;
+
+    [Header("CapeGears")]
+
+    public int gearShower = 1;
+
+    // Straight gear
+    [SerializeField]
+    private float firstGearAirAccel = 100f; //original 200f
+    [SerializeField]
+    private float firstGearMaxSpeed = 50f; //original 6.4f
+    [SerializeField]
+    private float firstGearMaxAirSpeed = 2f; //original 0.6f
+    [Header("Movement")]
+    // Curve gear
+    [SerializeField]
+    private float secondGearAirAccel = 350f; //original 200f
+    [SerializeField]
+    private float secondGearMaxSpeed = 5.0f; //original 6.4f
+    [SerializeField]
+    private float secondGearMaxAirSpeed = 0.4f; //original 0.6f
 
     #endregion
 
@@ -151,6 +173,12 @@ public class StrafeMovement : MonoBehaviour
         playerVelocity += CalculateMovement(input, playerVelocity);
         rb.velocity = playerVelocity;
 
+        if (gearShower == 1) // Straight Gear
+        {
+            Vector3 forwardForce = playerTransform.forward * airAccel * Time.fixedDeltaTime;
+            rb.AddForce(forwardForce, ForceMode.Acceleration);
+        }
+
         bool nearGround = CheckNearGround();
 
         if (!wasGrounded && nearGround)
@@ -159,6 +187,8 @@ public class StrafeMovement : MonoBehaviour
         }
 
         wasGrounded = nearGround;
+
+        CapeGears();
     }
 
     #region Movement
@@ -273,4 +303,31 @@ public class StrafeMovement : MonoBehaviour
                hit.collider.CompareTag("Ground");
     }
     //!
+
+    void CapeGears()
+    {
+        // manual selection of gears
+        if (Input.GetKey(KeyCode.Z))
+        {
+            // Select gear 1
+            gearShower = 1;
+            airAccel = firstGearAirAccel;
+            maxSpeed = firstGearMaxSpeed;
+            maxAirSpeed = firstGearMaxAirSpeed;
+            Debug.Log("Gear 1 selected");
+        }
+        else if (Input.GetKey(KeyCode.X))
+        {
+            // Select gear 2
+            gearShower = 2;
+            airAccel = secondGearAirAccel;
+            maxSpeed = secondGearMaxSpeed;
+            maxAirSpeed = secondGearMaxAirSpeed;
+            Debug.Log("Gear 2 selected");
+        }
+        else if (Input.GetKey(KeyCode.C))
+        {
+
+        }
+    }
 }
