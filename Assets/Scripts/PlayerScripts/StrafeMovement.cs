@@ -28,7 +28,7 @@ public class StrafeMovement : MonoBehaviour
     [SerializeField]
     private float friction = 8f;
     [SerializeField]
-    private float jumpForce = 5f;
+    public float jumpForce = 5f;
     [SerializeField]
     private float grappleMovementMultiplier = 0.4f;
 
@@ -41,6 +41,12 @@ public class StrafeMovement : MonoBehaviour
     [Header("CapeGears")]
 
     public int gearEngaged = 0;
+
+    private float targetAirAccel;
+    private float targetMaxSpeed;
+
+    private bool isChangingGear = false;
+    private float gearLerpSpeed = 100f;
 
     [Header("")]
     // Straight gear
@@ -175,15 +181,23 @@ public class StrafeMovement : MonoBehaviour
         playerVelocity += CalculateMovement(input, playerVelocity);
         rb.velocity = playerVelocity;
 
-        if (gearEngaged == 1) // Straight Gear
+        //! CapeGears
+        if (rb.velocity.magnitude > 10f)
         {
-            Vector3 cameraForward = camObj.transform.forward;
-            cameraForward.y = 0; 
-            cameraForward.Normalize();
+            if (gearEngaged == 1) // Straight Gear linear boost
+            {
+                Vector3 cameraForward = camObj.transform.forward;
+                cameraForward.y = 0;
+                cameraForward.Normalize();
 
-            Vector3 forwardForce = cameraForward * firstGearForwardAccel * Time.fixedDeltaTime;
-            rb.AddForce(forwardForce, ForceMode.Acceleration);
+                Vector3 forwardForce = cameraForward * firstGearForwardAccel * Time.fixedDeltaTime;
+                rb.AddForce(forwardForce, ForceMode.Acceleration);
+            }
         }
+
+
+        CapeGears();
+        //!
 
         bool nearGround = CheckNearGround();
 
@@ -194,7 +208,7 @@ public class StrafeMovement : MonoBehaviour
 
         wasGrounded = nearGround;
 
-        CapeGears();
+
     }
 
     #region Movement
@@ -318,23 +332,39 @@ public class StrafeMovement : MonoBehaviour
             airAccel = 200f;
             maxSpeed = 6.4f;
             maxAirSpeed = 0.6f;
+            isChangingGear = true;
         }
 
         if (Input.GetKey(KeyCode.X))
         {
             // Select gear 1
             gearEngaged = 1;
-            airAccel = firstGearAirAccel;
-            maxSpeed = firstGearMaxSpeed;
+            targetAirAccel = firstGearAirAccel;
+            targetMaxSpeed = firstGearMaxSpeed;
             maxAirSpeed = firstGearMaxAirSpeed;
+            isChangingGear = true;
         }
         else if (Input.GetKey(KeyCode.C))
         {
             // Select gear 2
             gearEngaged = 2;
-            airAccel = secondGearAirAccel;
-            maxSpeed = secondGearMaxSpeed;
+            targetAirAccel = secondGearAirAccel;
+            targetMaxSpeed = secondGearMaxSpeed;
             maxAirSpeed = secondGearMaxAirSpeed;
+            isChangingGear = true;
+        }
+
+        if (isChangingGear)
+        {
+            airAccel = Mathf.MoveTowards(airAccel, targetAirAccel, Time.deltaTime * gearLerpSpeed);
+            maxSpeed = Mathf.MoveTowards(maxSpeed, targetMaxSpeed, Time.deltaTime * gearLerpSpeed);
+
+            if (Mathf.Approximately(airAccel, targetAirAccel) && Mathf.Approximately(maxSpeed, targetMaxSpeed))
+            {
+                airAccel = targetAirAccel;
+                maxSpeed = targetMaxSpeed;
+                isChangingGear = false;
+            }
         }
     }
 }

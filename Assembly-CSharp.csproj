@@ -64,16 +64,23 @@
     <Analyzer Include="D:\Unity\2022.3.43f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\PlayerScripts\GrappleScript V2.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\RotateGrapple.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\GrappleScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StrafeMovement.cs" />
+    <Compile Include="Assets\Scripts\MapScript\RespawnTeleport.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\JumpingPad.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\SpeedDisplay.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\CameraPlayer.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\CameraFOV.cs" />
+    <Compile Include="Assets\Outline\O_CustomImageEffect.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Outline\SS Depth Based Outline.shader" />
+    <None Include="Assets\Outline\SS All-in-One Outline.shader" />
+    <None Include="Assets\Outline\SS Texture Based Outline.shader" />
+    <None Include="Assets\Outline\SS Linear 01 Depth Outline.shader" />
     <None Include="Assets\LICENSES\LICENSE.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -1073,16 +1080,16 @@
       <HintPath>Library\ScriptAssemblies\Analytics.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
@@ -1135,7 +1142,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="OEBIF.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>
