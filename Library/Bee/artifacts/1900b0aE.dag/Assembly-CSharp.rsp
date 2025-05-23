@@ -397,6 +397,7 @@
 "Assets/Scripts/PlayerScripts/RotateGrapple.cs"
 "Assets/Scripts/PlayerScripts/SpeedDisplay.cs"
 "Assets/Scripts/PlayerScripts/StrafeMovement.cs"
+"Assets/Scripts/PlayerScripts/WallJump.cs"
 -langversion:9.0
 /deterministic
 /optimize+

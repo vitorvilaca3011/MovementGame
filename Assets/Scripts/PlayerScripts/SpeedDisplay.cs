@@ -17,7 +17,7 @@ public class PlayerSpeedDisplay : MonoBehaviour
         float speed = horizontalVelocity.magnitude;
         speedText.text = $"Speed: {speed:F2}";
 
-        int gearEngaged = strafeMovement.gearEngaged; // Supondo que você tenha um método GetGearEngaged() na sua classe StrafeMovement
-        gearsEngaged.text = $"Gear: {gearEngaged}";
+        //int gearEngaged = strafeMovement.gearEngaged; // Supondo que você tenha um método GetGearEngaged() na sua classe StrafeMovement
+        //gearsEngaged.text = $"Gear: {gearEngaged}";
     }
 }

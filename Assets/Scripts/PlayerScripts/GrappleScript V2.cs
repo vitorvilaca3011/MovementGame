@@ -17,22 +17,17 @@ public class GrappleScriptV6 : MonoBehaviour
     [Header("Grapple Settings")]
     [SerializeField] private float maxGrappleDistance = 100f;
     [SerializeField] private float cableSpeed = 200f;
-    [SerializeField] private float pullForce = 50f;
-    [SerializeField] private float pullGravityRatio = 0.1f;
-    [SerializeField] private float slingshotForce = 20f;
-    [SerializeField] private float slingshotThreshold = 0.2f;
+    [SerializeField] private float grapplePullSpeed = 60f; // Pathfinder: rápido!
+    [SerializeField] private float grappleSpringiness = 0.2f; // Quanto mais baixo, mais "elástico"
+    [SerializeField] private float grappleDamping = 0.8f; // Damping para não oscilar demais
     [SerializeField] private float cooldownTime = 5f;
-    [SerializeField] private float maxHoldTime = 1.7f;
+    [SerializeField] private float maxHoldTime = 2.0f;
 
     [Header("Jump Boost")]
     [SerializeField] private float jumpBoostMultiplier = 1.5f;
     [SerializeField] private float jumpBoostWindow = 0.25f;
     private bool applyJumpBoost = false;
     private float originalJumpForce;
-
-    [Header("Break Check Delay")]
-    [SerializeField] private float breakCheckDelay = 0.15f; // Time before checking if player passed grapple point
-    private float grappleEngagedTime;
 
     private Vector3 grapplePoint;
     private bool isGrappling, isCooldown, isFiring;
@@ -53,7 +48,11 @@ public class GrappleScriptV6 : MonoBehaviour
         // Detect grapple target anywhere (no tag restriction)
         RaycastHit hit;
         bool canGrapple = Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, maxGrappleDistance)
-                          && !isCooldown;
+                          && !isCooldown
+                          && hit.collider != null
+                  && hit.collider.gameObject != player.gameObject;
+
+
         grappleIndicator.SetActive(canGrapple && !isGrappling);
 
         // Start grapple
@@ -80,27 +79,25 @@ public class GrappleScriptV6 : MonoBehaviour
     {
         if (isGrappling)
         {
-            // Check if player passed grapple point after a small delay
-            if (Time.time - grappleEngagedTime > breakCheckDelay)
-            {
-                Vector3 dirToHook = (grapplePoint - player.position).normalized;
-                float dot = Vector3.Dot(rb.velocity.normalized, dirToHook);
-                if (dot < 0.2f)
-                {
-                    StopGrapple();
-                    return;
-                }
-            }
-
             // Draw grapple cable
             lr.SetPosition(0, grappleTip.position);
             lr.SetPosition(1, grapplePoint);
 
-            // Apply pulling force with gravity factor
-            Vector3 dir = (grapplePoint - player.position).normalized;
-            Vector3 pull = dir * pullForce;
-            Vector3 gravity = Physics.gravity * pullGravityRatio;
-            rb.AddForce(pull + gravity, ForceMode.Acceleration);
+            // Pathfinder-style pull: spring force + direct move
+            Vector3 toTarget = grapplePoint - player.position;
+            float distance = toTarget.magnitude;
+
+            // Spring force (Pathfinder style)
+            Vector3 springForce = toTarget.normalized * (distance * grappleSpringiness);
+            rb.velocity = Vector3.Lerp(rb.velocity, springForce + toTarget.normalized * grapplePullSpeed, grappleDamping * Time.deltaTime);
+
+            // Guarantee arrival: if very close, snap to point and stop
+            float arriveThreshold = 1.2f;
+            if (distance < arriveThreshold)
+            {
+                player.position = grapplePoint;
+                StopGrapple();
+            }
         }
     }
 
@@ -128,7 +125,6 @@ public class GrappleScriptV6 : MonoBehaviour
         isFiring = false;
         grappleStartTime = Time.time;
         lastGrappleTime = Time.time;
-        grappleEngagedTime = Time.time;
 
         // Enable jump boost window and modify jump force
         if (strafeMovement != null)
@@ -150,14 +146,6 @@ public class GrappleScriptV6 : MonoBehaviour
     {
         if (!isGrappling) return;
 
-        float dist = Vector3.Distance(player.position, grapplePoint);
-        if (dist <= slingshotThreshold)
-        {
-            Vector3 launchDir = (grapplePoint - player.position).normalized;
-            rb.AddForce(launchDir * slingshotForce, ForceMode.VelocityChange);
-        }
-
-        // Reset grapple visuals and flags
         lr.positionCount = 0;
         isGrappling = false;
         applyJumpBoost = false;

@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\GrappleScript V2.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\RotateGrapple.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\GrappleScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\WallJump.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StrafeMovement.cs" />
     <Compile Include="Assets\Scripts\MapScript\RespawnTeleport.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\JumpingPad.cs" />
