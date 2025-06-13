@@ -103,7 +103,7 @@ public class StrafeMovement : MonoBehaviour
         }
         wasGrounded = isGrounded || IsNearGround();
     }
-
+    #region movement calculations
     // Calculates the movement direction based on camera orientation and input
     Vector3 GetWishDirection(Vector2 input)
     {
@@ -169,7 +169,7 @@ public class StrafeMovement : MonoBehaviour
         return Physics.SphereCast(rayOrigin, 0.3f, Vector3.down, out RaycastHit hit, rayDistance) &&
                hit.collider.CompareTag("Ground");
     }
-
+    #endregion
     // Handles crouch logic and camera lerp
     void HandleCrouch()
     {
@@ -214,4 +214,6 @@ public class StrafeMovement : MonoBehaviour
 
         return Physics.Raycast(origin, Vector3.down, checkDistance);
     }
+
+    
 }

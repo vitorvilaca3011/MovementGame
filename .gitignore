@@ -20,4 +20,6 @@
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 .qodo
-/.vs/MovementGame/FileContentIndex/4f5fe7f5-d023-4395-8a89-012cf313fefd.vsidx
+
+# Ignore Visual Studio temporary files
+.vs/

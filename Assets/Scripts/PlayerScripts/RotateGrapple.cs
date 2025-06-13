@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RotateGrapple : MonoBehaviour
 {
-    public GrappleScript grappling;
+    /*public GrappleScript grappling;
 
     private Quaternion desiredRotation;
     private float rotationSpeed = 5f;
@@ -20,6 +20,6 @@ public class RotateGrapple : MonoBehaviour
         }
 
         transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotation, Time.deltaTime * rotationSpeed);
-    }
+    }*/
 }
 

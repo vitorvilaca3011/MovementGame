@@ -22,6 +22,14 @@ public class GrappleScriptV6 : MonoBehaviour
     [SerializeField] private float grappleDamping = 0.8f; // Damping para não oscilar demais
     [SerializeField] private float cooldownTime = 5f;
     [SerializeField] private float maxHoldTime = 2.0f;
+    public static GrappleScriptV6 Instance { get; private set; }
+    
+    [SerializeField]private bool grappleEnabled = false; // Flag to enable/disable grapple
+   
+    // Public getters for other scripts, dont know if ill use it
+    public bool IsGrappling() => isGrappling || isFiring;
+    public bool IsOnCooldown() => isCooldown;
+
 
     [Header("Jump Boost")]
     [SerializeField] private float jumpBoostMultiplier = 1.5f;
@@ -35,6 +43,7 @@ public class GrappleScriptV6 : MonoBehaviour
 
     void Awake()
     {
+        Instance = this;
         lr = GetComponent<LineRenderer>();
         rb = player.GetComponent<Rigidbody>();
         lr.positionCount = 0;
@@ -45,7 +54,8 @@ public class GrappleScriptV6 : MonoBehaviour
 
     void Update()
     {
-        // Detect grapple target anywhere (no tag restriction)
+        if (!grappleEnabled || isCooldown) return; // Check if grapple is enabled
+        
         RaycastHit hit;
         bool canGrapple = Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, maxGrappleDistance)
                           && !isCooldown
@@ -83,7 +93,7 @@ public class GrappleScriptV6 : MonoBehaviour
             lr.SetPosition(0, grappleTip.position);
             lr.SetPosition(1, grapplePoint);
 
-            // Pathfinder-style pull: spring force + direct move
+            //spring force + direct move
             Vector3 toTarget = grapplePoint - player.position;
             float distance = toTarget.magnitude;
 
@@ -163,7 +173,14 @@ public class GrappleScriptV6 : MonoBehaviour
         isCooldown = false;
     }
 
-    // Public getters for other scripts
-    public bool IsGrappling() => isGrappling || isFiring;
-    public bool IsOnCooldown() => isCooldown;
+    
+    public void SetGrappleEnabled(bool enabled)
+    {
+        grappleEnabled = enabled;
+
+        if (!enabled && isGrappling)
+        {
+            StopGrapple(); // Se o player sair da zona, quebra o hook
+        }
+    }
 }

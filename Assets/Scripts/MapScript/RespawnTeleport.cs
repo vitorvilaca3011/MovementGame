@@ -9,6 +9,7 @@ public class RespawnTeleport : MonoBehaviour
     private StrafeMovement strafeMovement;
     public Rigidbody rb;
     public GameObject respawnPoint;
+    public GrappleScriptV6 grappleScript;
     void Start()
     {
         strafeMovement = player.GetComponent<StrafeMovement>();
@@ -33,10 +34,14 @@ public class RespawnTeleport : MonoBehaviour
             // Teleport the player to the respawn point
             TeleportPlayer();
         }
-
+        else if (other.gameObject.layer == LayerMask.NameToLayer("KillerObject") && other.gameObject == player)
+        {
+            // If the player touches an object with the "KillerObject" layer, teleport the player
+            TeleportPlayer();
+        }
     }
 
-    void TeleportPlayer()
+    public void TeleportPlayer()
     {
         rb.velocity = Vector3.zero; // Reset player velocity
         StartCoroutine(DelayToMove());
@@ -51,4 +56,5 @@ public class RespawnTeleport : MonoBehaviour
         strafeMovement.canMove = true;
     }
 
+    
 }

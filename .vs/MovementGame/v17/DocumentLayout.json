@@ -1,18 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "X:\\MovementGame\\",
+  "WorkspaceRootPath": "E:\\MovementGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|x:\\movementgame\\assets\\scripts\\strafemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\strafemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|e:\\movementgame\\assets\\scripts\\mapscript\\grapplezones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mapscript\\grapplezones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|x:\\movementgame\\assets\\scripts\\grapplescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\grapplescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\playerscripts\\grapplescript v2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerscripts\\grapplescript v2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|x:\\movementgame\\assets\\rotategrapple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\rotategrapple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\playerscripts\\rotategrapple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerscripts\\rotategrapple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\mapscript\\respawnteleport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mapscript\\respawnteleport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\playerscripts\\strafemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerscripts\\strafemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\killerobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\killerobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,47 +34,81 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GrappleZones.cs",
+              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\MapScript\\GrappleZones.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MapScript\\GrappleZones.cs",
+              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\MapScript\\GrappleZones.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MapScript\\GrappleZones.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T18:42:07.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GrappleScript V2.cs",
+              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\GrappleScript V2.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\GrappleScript V2.cs",
+              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\GrappleScript V2.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\GrappleScript V2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T18:35:08.814Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "RotateGrapple.cs",
-              "DocumentMoniker": "X:\\MovementGame\\Assets\\RotateGrapple.cs",
-              "RelativeDocumentMoniker": "Assets\\RotateGrapple.cs",
-              "ToolTip": "X:\\MovementGame\\Assets\\RotateGrapple.cs",
-              "RelativeToolTip": "Assets\\RotateGrapple.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\RotateGrapple.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\RotateGrapple.cs",
+              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\RotateGrapple.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\RotateGrapple.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T19:03:38.849Z"
+              "WhenOpened": "2025-06-13T18:24:08.314Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GrappleScript.cs",
-              "DocumentMoniker": "X:\\MovementGame\\Assets\\Scripts\\GrappleScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GrappleScript.cs",
-              "ToolTip": "X:\\MovementGame\\Assets\\Scripts\\GrappleScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GrappleScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA8AAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "KillerObject.cs",
+              "DocumentMoniker": "E:\\MovementGame\\Assets\\KillerObject.cs",
+              "RelativeDocumentMoniker": "Assets\\KillerObject.cs",
+              "ToolTip": "E:\\MovementGame\\Assets\\KillerObject.cs",
+              "RelativeToolTip": "Assets\\KillerObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T18:42:35.109Z"
+              "WhenOpened": "2025-06-13T17:54:52.267Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "RespawnTeleport.cs",
+              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\MapScript\\RespawnTeleport.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MapScript\\RespawnTeleport.cs",
+              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\MapScript\\RespawnTeleport.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MapScript\\RespawnTeleport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T17:32:36.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "StrafeMovement.cs",
-              "DocumentMoniker": "X:\\MovementGame\\Assets\\Scripts\\StrafeMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\StrafeMovement.cs",
-              "ToolTip": "X:\\MovementGame\\Assets\\Scripts\\StrafeMovement.cs",
-              "RelativeToolTip": "Assets\\Scripts\\StrafeMovement.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAAADMAAAAcAAAAAAAAAA==",
+              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\StrafeMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\StrafeMovement.cs",
+              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\StrafeMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\StrafeMovement.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAADwv9oAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T01:31:56.32Z"
+              "WhenOpened": "2025-06-12T18:35:47.726Z"
             }
           ]
         }
