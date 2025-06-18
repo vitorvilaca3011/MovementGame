@@ -3,9 +3,10 @@ using UnityEngine;
 public class GrappleZone : MonoBehaviour
 {
     public GrappleScriptV6 grappleScript;
+    public GameObject grappleIndicator;
     void Start()
     {
-
+        grappleIndicator.SetActive(false);
         // Ensure the GrappleScriptV6 instance is initialized
         if (GrappleScriptV6.Instance == null)
         {
@@ -26,6 +27,8 @@ public class GrappleZone : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GrappleScriptV6.Instance.SetGrappleEnabled(false);
+            grappleIndicator.SetActive(false);
         }
+
     }
 }

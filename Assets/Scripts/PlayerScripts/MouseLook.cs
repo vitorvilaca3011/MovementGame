@@ -31,10 +31,18 @@ public class MouseLook : MonoBehaviour {
 	public bool invertY = false;
 
 	float rotationY = 0F;
+    
+	private float sensitivity;
 
-	void Update ()
+	public bool isMouseLookEnabled = true;
+
+    void Update ()
 	{
-		float ySens = sensitivityY;
+		if (!isMouseLookEnabled)
+		{
+			return;
+        }
+        float ySens = sensitivityY;
 		if(invertY) { ySens *= -1f; }
 
 		if (axes == RotationAxes.MouseXAndY)
@@ -61,7 +69,10 @@ public class MouseLook : MonoBehaviour {
 	
 	void Start ()
 	{
-		Cursor.lockState = CursorLockMode.Locked;
+        sensitivityX = PlayerPrefs.GetFloat("MouseSensitivityX", sensitivityX);
+        sensitivityY = PlayerPrefs.GetFloat("MouseSensitivityY", sensitivityY);
+
+        Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 		// Make the rigid body not change rotation
 		if (GetComponent<Rigidbody>())

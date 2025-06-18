@@ -62,11 +62,17 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerScripts\GrappleScript V2.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\RotateGrapple.cs" />
+    <Compile Include="Assets\Scripts\MenuUI_Related\OptionsMenu.cs" />
+    <Compile Include="Assets\Scripts\MenuUI_Related\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\MenuUI_Related\MainMenuUI.cs" />
+    <Compile Include="Assets\Scripts\MenuUI_Related\PauseMenuController.cs" />
     <Compile Include="Assets\KillerObject.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\WallJump.cs" />
+    <Compile Include="Assets\Scripts\MenuUI_Related\MapSelector.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StrafeMovement.cs" />
     <Compile Include="Assets\Scripts\MapScript\RespawnTeleport.cs" />
     <Compile Include="Assets\Scripts\MapScript\GrappleZone.cs" />
+    <Compile Include="Assets\Scripts\MenuUI_Related\UIManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\JumpingPad.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\SpeedDisplay.cs" />
@@ -75,11 +81,33 @@
     <Compile Include="Assets\Outline\O_CustomImageEffect.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Outline\SS Depth Based Outline.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Outline\SS All-in-One Outline.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Outline\SS Texture Based Outline.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\SkySeries Freebie\Hdri setup.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Outline\SS Linear 01 Depth Outline.shader" />
     <None Include="Assets\LICENSES\LICENSE.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

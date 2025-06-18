@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "E:\\MovementGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|e:\\movementgame\\assets\\scripts\\mapscript\\grapplezone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\menuui_related\\mapselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuui_related\\mapselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|e:\\movementgame\\assets\\scripts\\menuui_related\\optionsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuui_related\\optionsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\playerscripts\\mouselook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerscripts\\mouselook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\playerscripts\\camerafov.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerscripts\\camerafov.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\mapscript\\grapplezone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mapscript\\grapplezone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|e:\\movementgame\\assets\\scripts\\playerscripts\\grapplescript v2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerscripts\\grapplescript v2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\playerscripts\\rotategrapple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerscripts\\rotategrapple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\mapscript\\respawnteleport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mapscript\\respawnteleport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\playerscripts\\strafemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerscripts\\strafemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\killerobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\killerobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,81 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GrappleZone.cs",
-              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\MapScript\\GrappleZone.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MapScript\\GrappleZone.cs",
-              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\MapScript\\GrappleZone.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MapScript\\GrappleZone.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "OptionsMenu.cs",
+              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\MenuUI_Related\\OptionsMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MenuUI_Related\\OptionsMenu.cs",
+              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\MenuUI_Related\\OptionsMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MenuUI_Related\\OptionsMenu.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwE8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T18:39:20.062Z",
+              "WhenOpened": "2025-06-16T17:51:24.938Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GrappleScript V2.cs",
-              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\GrappleScript V2.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\GrappleScript V2.cs",
-              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\GrappleScript V2.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\GrappleScript V2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAADAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MapSelector.cs",
+              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\MenuUI_Related\\MapSelector.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MenuUI_Related\\MapSelector.cs",
+              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\MenuUI_Related\\MapSelector.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MenuUI_Related\\MapSelector.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBcAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T18:35:08.814Z",
+              "WhenOpened": "2025-06-16T17:50:25.17Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RotateGrapple.cs",
-              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\RotateGrapple.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\RotateGrapple.cs",
-              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\RotateGrapple.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\RotateGrapple.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAHAAAAAAAAAA==",
+              "Title": "MouseLook.cs",
+              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\MouseLook.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\MouseLook.cs",
+              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\MouseLook.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\MouseLook.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAwwEIAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T18:24:08.314Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "KillerObject.cs",
-              "DocumentMoniker": "E:\\MovementGame\\Assets\\KillerObject.cs",
-              "RelativeDocumentMoniker": "Assets\\KillerObject.cs",
-              "ToolTip": "E:\\MovementGame\\Assets\\KillerObject.cs",
-              "RelativeToolTip": "Assets\\KillerObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T17:54:52.267Z"
+              "WhenOpened": "2025-06-16T17:48:37.814Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "RespawnTeleport.cs",
-              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\MapScript\\RespawnTeleport.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MapScript\\RespawnTeleport.cs",
-              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\MapScript\\RespawnTeleport.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MapScript\\RespawnTeleport.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "Title": "CameraFOV.cs",
+              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\CameraFOV.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\CameraFOV.cs",
+              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\CameraFOV.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\CameraFOV.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T17:32:36.782Z"
+              "WhenOpened": "2025-06-16T17:48:05.851Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "StrafeMovement.cs",
-              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\StrafeMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\StrafeMovement.cs",
-              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\StrafeMovement.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\StrafeMovement.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAADwv9oAAAABAAAAAAAAAA==",
+              "Title": "GrappleZone.cs",
+              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\MapScript\\GrappleZone.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MapScript\\GrappleZone.cs",
+              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\MapScript\\GrappleZone.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MapScript\\GrappleZone.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T18:35:47.726Z"
+              "WhenOpened": "2025-06-13T18:42:19.14Z"
             }
           ]
         }

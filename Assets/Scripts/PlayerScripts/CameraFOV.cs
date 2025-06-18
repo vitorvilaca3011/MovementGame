@@ -10,6 +10,11 @@ public class CameraFOV : MonoBehaviour
     [SerializeField]private Rigidbody playerRb;
     [SerializeField]private Camera cam;
 
+    private void Start()
+    {
+        dynamicFov = PlayerPrefs.GetInt("DynamicFOV", 1) == 1; // Load dynamicFov preference from PlayerPrefs
+    }
+
     void Update()
     {
         if(dynamicFov == true)
