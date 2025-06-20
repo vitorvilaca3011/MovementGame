@@ -40,6 +40,9 @@ public class OptionsMenu : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
 
         // Load saved sensitivity
+        sensitivityXSlider.onValueChanged.AddListener(UpdateSensitivityX);
+        sensitivityYSlider.onValueChanged.AddListener(UpdateSensitivityY);
+
         sensitivityXSlider.value = PlayerPrefs.GetFloat("MouseSensitivityX", 15f);
         sensitivityYSlider.value = PlayerPrefs.GetFloat("MouseSensitivityY", 15f);
 
@@ -69,6 +72,18 @@ public class OptionsMenu : MonoBehaviour
     public void SetSensitivityY(float value)
     {
         PlayerPrefs.SetFloat("MouseSensitivityY", value);
+    }
+
+    public void UpdateSensitivityX(float value)
+    {
+        PlayerPrefs.SetFloat("SensitivityX", value);
+        PlayerPrefs.Save();
+    }
+
+    public void UpdateSensitivityY(float value)
+    {
+        PlayerPrefs.SetFloat("SensitivityY", value);
+        PlayerPrefs.Save();
     }
 
     public void SetDynamicFOV(bool value)

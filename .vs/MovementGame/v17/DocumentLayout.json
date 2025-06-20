@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "E:\\MovementGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|e:\\movementgame\\assets\\scripts\\menuui_related\\pausemenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuui_related\\pausemenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|e:\\movementgame\\assets\\scripts\\playerscripts\\speeddisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerscripts\\speeddisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|e:\\movementgame\\assets\\scripts\\menuui_related\\mapselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuui_related\\mapselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\menuui_related\\optionsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|e:\\movementgame\\assets\\scripts\\menuui_related\\optionsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuui_related\\optionsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\playerscripts\\mouselook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerscripts\\mouselook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\menuui_related\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuui_related\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\menuui_related\\pausemenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuui_related\\pausemenucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\menuui_related\\mapselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuui_related\\mapselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0550DA0C-03A1-71C4-C0BF-2EB82B5D81E5}|Assembly-CSharp.csproj|E:\\MovementGame\\assets\\scripts\\playerscripts\\camerafov.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,31 +47,56 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SpeedDisplay.cs",
+              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\SpeedDisplay.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\SpeedDisplay.cs",
+              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\SpeedDisplay.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\SpeedDisplay.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T02:57:24.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\MenuUI_Related\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MenuUI_Related\\UIManager.cs",
+              "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\MenuUI_Related\\UIManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MenuUI_Related\\UIManager.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAswFEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T16:24:09.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "PauseMenuController.cs",
               "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\MenuUI_Related\\PauseMenuController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MenuUI_Related\\PauseMenuController.cs",
               "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\MenuUI_Related\\PauseMenuController.cs",
               "RelativeToolTip": "Assets\\Scripts\\MenuUI_Related\\PauseMenuController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCoAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T16:10:30.23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T16:10:30.23Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "OptionsMenu.cs",
               "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\MenuUI_Related\\OptionsMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MenuUI_Related\\OptionsMenu.cs",
               "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\MenuUI_Related\\OptionsMenu.cs",
               "RelativeToolTip": "Assets\\Scripts\\MenuUI_Related\\OptionsMenu.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAIwE8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAowE0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T17:51:24.938Z"
+              "WhenOpened": "2025-06-16T17:51:24.938Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "MapSelector.cs",
               "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\MenuUI_Related\\MapSelector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MenuUI_Related\\MapSelector.cs",
@@ -71,24 +104,24 @@
               "RelativeToolTip": "Assets\\Scripts\\MenuUI_Related\\MapSelector.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwBcAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T17:50:25.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T17:50:25.17Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MouseLook.cs",
               "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\MouseLook.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\MouseLook.cs",
               "ToolTip": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\MouseLook.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerScripts\\MouseLook.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAwwEIAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowEIAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T17:48:37.814Z"
+              "WhenOpened": "2025-06-16T17:48:37.814Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "CameraFOV.cs",
               "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\PlayerScripts\\CameraFOV.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\CameraFOV.cs",
@@ -100,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "GrappleZone.cs",
               "DocumentMoniker": "E:\\MovementGame\\Assets\\Scripts\\MapScript\\GrappleZone.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MapScript\\GrappleZone.cs",

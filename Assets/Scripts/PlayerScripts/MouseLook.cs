@@ -19,8 +19,8 @@ public class MouseLook : MonoBehaviour {
 
 	public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
 	public RotationAxes axes = RotationAxes.MouseXAndY;
-	public float sensitivityX = 15F;
-	public float sensitivityY = 15F;
+	private float sensitivityX = 15F;
+	private float sensitivityY = 15F;
 
 	public float minimumX = -360F;
 	public float maximumX = 360F;
@@ -38,10 +38,8 @@ public class MouseLook : MonoBehaviour {
 
     void Update ()
 	{
-		if (!isMouseLookEnabled)
-		{
-			return;
-        }
+		if (!isMouseLookEnabled) return; // Exit if mouse look is disabled
+
         float ySens = sensitivityY;
 		if(invertY) { ySens *= -1f; }
 
@@ -65,7 +63,10 @@ public class MouseLook : MonoBehaviour {
 			
 			transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
 		}
-	}
+
+        sensitivityX = PlayerPrefs.GetFloat("SensitivityX", 15f);
+        sensitivityY = PlayerPrefs.GetFloat("SensitivityY", 15f);
+    }
 	
 	void Start ()
 	{
